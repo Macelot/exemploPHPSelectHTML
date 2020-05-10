@@ -6,18 +6,25 @@
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="exemplo.php">
+<?php
+
+$dia="";
+if(isset($_POST['dia'])){
+	$dia=$_POST['dia'];
+}
+?>
+<form id="form1" name="form1" method="post" action="exemplo-select-HTML.php">
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
 			<select class="form-control form-control-lg" name="dia">
-			  	<option value="2" <?php echo  ($_POST['dia']==2) ? "selected" : "" ?> >Segunda-feira</option>
-				<option value="3" <?php echo  ($_POST['dia']==3) ? "selected" : "" ?>>Terça-feira</option>
-				<option value="4" <?php echo  ($_POST['dia']==4) ? "selected" : "" ?>>Quarta-feira</option>
-				<option value="5" <?php echo  ($_POST['dia']==5) ? "selected" : "" ?>>Quinta-feira</option>
-				<option value="6" <?php echo  ($_POST['dia']==6) ? "selected" : "" ?>>Sexta-feira</option>
-				<option value="7" <?php echo  ($_POST['dia']==7) ? "selected" : "" ?>>Sábado</option>
-				<option value="1" <?php echo  ($_POST['dia']==1) ? "selected" : "" ?>>Domingo</option>
+			  	<option value="2" <?php echo  ($dia==2) ? "selected" : "" ?> >Segunda-feira</option>
+				<option value="3" <?php echo  ($dia==3) ? "selected" : "" ?>>Terça-feira</option>
+				<option value="4" <?php echo  ($dia==4) ? "selected" : "" ?>>Quarta-feira</option>
+				<option value="5" <?php echo  ($dia==5) ? "selected" : "" ?>>Quinta-feira</option>
+				<option value="6" <?php echo  ($dia==6) ? "selected" : "" ?>>Sexta-feira</option>
+				<option value="7" <?php echo  ($dia==7) ? "selected" : "" ?>>Sábado</option>
+				<option value="1" <?php echo  ($dia==1) ? "selected" : "" ?>>Domingo</option>
 			</select>
 		</div>
 	</div>
